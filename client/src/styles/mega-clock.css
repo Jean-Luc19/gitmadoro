@@ -1,0 +1,62 @@
+body{
+
+  font-family: tahoma;
+}
+h1{
+  color: #fff;
+  text-align: center;
+  font-size: 74px;
+  letter-spacing: 10px;
+}
+
+#mega-countdown {
+  background: #282e3a;
+  width: 850px;
+  height: 500px;
+  margin: 15% auto;
+  padding: 20px;
+}
+
+#mega-clock span{
+  float: left;
+  text-align: center;
+  font-size: 84px;
+  margin: auto 2.5%;
+  color: #fff;
+  padding: 20px;
+  width: 20%;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+#mega-clock span:nth-child(1){
+  background: #fa5559;
+}
+#mega-clock span:nth-child(2){
+  background: #26c2b9;
+}
+#mega-clock:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#units span{
+  float: left;
+  width: 25%;
+  text-align: center;
+  margin-top: 30px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px rgba(10,10,10, 0.7);
+}
+
+span.turn{
+  animation: turn 0.7s ease forwards;
+}
+
+@keyframes turn{
+  0%{transform: rotateX(0deg)}
+  100%{transform: rotateX(360deg)}
+}
