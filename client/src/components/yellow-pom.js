@@ -26,7 +26,6 @@ class YellowPom extends Component {
             'height': `${100 - Math.floor(this.state.time/this.state.sessionLength *100)}%`,
             'backgroundColor': '#FFAD00'
         }
-        console.log(fillerStyle)
         return (
             <div className='yellow-pom'onClick={() => this.handleClick()}>
                 <div className="pom">

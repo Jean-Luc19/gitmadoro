@@ -17,10 +17,3 @@
     overflow: hidden;
     z-index: 100;
 }
-
-.inner-pom {
-    position: absolute;
-    width: 300px;
-    height: 00px;
-    background-color: green;
-}

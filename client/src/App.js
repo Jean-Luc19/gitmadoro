@@ -13,6 +13,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
          <YellowPom />
+         <MegaClock />
       </div>
     );
   }
