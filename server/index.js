@@ -2,9 +2,9 @@ const path = require('path');
 const express = require('express');
 
 const app = express();
-
+const github = require('./config');
 // API endpoints go here!
-
+console.log( github)
 
 // Serve the built client
 app.use(express.static(path.resolve(__dirname, '../client/build')));
