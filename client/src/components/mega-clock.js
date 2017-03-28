@@ -38,7 +38,6 @@ class MegaClock extends Component {
 
         return (
             <div id="mega-countdown">
-                <button onClick={() => this.handleClick()}>Start Interval</button>
                 <div id="mega-clock">
                     <span className={this.state.minTurn}>{min}</span>
                     <span className={this.state.secTurn}>{sec}</span>
@@ -47,6 +46,7 @@ class MegaClock extends Component {
                     <span>minutes</span>
                     <span>seconds</span>
                 </div>
+                    <button onClick={() => this.handleClick()}>Start Interval</button>
             </div>
 
         )
