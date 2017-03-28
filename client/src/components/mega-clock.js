@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setTime, toggleTimeRunning } from '../actions/time-actions'
 import '../styles/mega-clock.css';
 
 
-class MegaClock extends Component {
+export class MegaClock extends Component {
     constructor (props) {
         super(props)
         this.state = {
-            number: 1500,
+            number: null,
             secTurn: '',
             minTurn: ''
         }
     }
 
     handleClick() {
+        toggleTimeRunning();
+        this.setState({number: this.props.startTime})
         const keys = Object.keys(this.state)
         setInterval(() => {
             let secs = this.state.number - 1
@@ -32,9 +36,8 @@ class MegaClock extends Component {
     }
 
     render () {
-        let min = Math.floor(this.state.number / 60);
-        let sec = Math.floor(this.state.number % 60)
-
+        let min = this.props.timeRunning ? Math.floor(this.state.number /60) : Math.floor(this.props.startTime / 60);
+        let sec = this.props.timeRunning ? Math.floor(this.state.number % 60) : Math.floor(this.props.startTime % 60);
 
         return (
             <div id="mega-countdown">
@@ -53,6 +56,13 @@ class MegaClock extends Component {
     }
 }
 
+const mapStateToProps = (state, props) => ({
+    startTime: state.time.startTime,
+    timeRunning: state.time.timeRunning
+})
 
-export default MegaClock;
-//
+const mapDispatchToProps = (dispatch) => ({
+    toggleTimeRunning: () => dispatch(toggleTimeRunning())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MegaClock);

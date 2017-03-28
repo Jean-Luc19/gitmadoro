@@ -1,10 +1,9 @@
-import * as actions from '../actions/actions';
 import { combineReducers } from 'redux';
 
-import time from './time-reducer';
-import data from './data-reducer';
+import {timeReducer} from './time-reducer';
+import {dataReducer} from './data-reducer';
 
 export default combineReducers({
-    time,
-    data
+    time: timeReducer,
+    data: dataReducer
 })

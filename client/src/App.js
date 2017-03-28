@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import MegaClock from './components/mega-clock';
 import YellowPom from './components/yellow-pom';
+import TimerControls from './components/timer-controls';
 
 class App extends Component {
   render() {
@@ -11,8 +12,10 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-         <MegaClock />
-         <YellowPom />
+        <div>
+            <TimerControls />
+        </div>
+
       </div>
     );
   }
