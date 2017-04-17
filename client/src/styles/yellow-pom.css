@@ -1,5 +1,6 @@
 .yellow-pom {
-    height: 400px;
+    margin: auto;
+    height: auto;
     width: 500px;
     color: #FAFAFA;
     padding: 10px;
@@ -13,7 +14,6 @@
     margin: 0 auto;
     border: 2px solid #FFAD00;
     border-radius: 50%;
-    cursor: pointer;
     overflow: hidden;
     z-index: 100;
 }

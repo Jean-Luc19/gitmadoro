@@ -10,10 +10,13 @@ h1{
 }
 #mega-countdown{
   width: 850px;
+  height: 100px;
   margin: 15% auto;
 }
+
+/*
 #mega-clock span{
-  float: left;
+
   text-align: center;
   font-size: 84px;
   margin: 0 2.5%;
@@ -41,7 +44,7 @@ h1{
   clear: both;
 }
 #units span{
-  float: left;
+
   width: 25%;
   text-align: center;
   margin-top: 30px;
@@ -50,7 +53,7 @@ h1{
   font-size: 13px;
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px rgba(10,10,10, 0.7);
-}
+}*/
 
 span.turn{
   animation: turn 0.7s ease forwards;

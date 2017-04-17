@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setTime } from '../actions/time-actions'
 import MegaClock from './mega-clock';
+import YellowPom from './yellow-pom';
 import '../styles/mega-clock.css';
+
 
 export class TimerControls extends Component {
     constructor(props) {
@@ -11,16 +13,13 @@ export class TimerControls extends Component {
 
     render () {
         return (
-            <div>
-                <div id="units">
+            <div id="clock-container">
+                    <YellowPom />
+                <div id="">
                     <span onClick={() => this.props.setTime(-30)}>-</span>
                     <span>:30</span>
                     <span onClick={() => this.props.setTime(30)}>+</span>
                 </div>
-                <div>
-                    <MegaClock />
-                </div>
-
             </div>
         )
     }

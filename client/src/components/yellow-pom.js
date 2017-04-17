@@ -27,14 +27,12 @@ class YellowPom extends Component {
             'backgroundColor': '#FFAD00'
         }
         return (
-            <div className='yellow-pom'onClick={() => this.handleClick()}>
+            <div className='yellow-pom' onClick={() => this.handleClick()}>
                 <div className="pom">
                     <div style={fillerStyle} >
-                        <h2>{min} : {sec}</h2>
                     </div>
                 </div>
-
-
+                <h2>{min} : {sec}</h2>
             </div>
         )
 

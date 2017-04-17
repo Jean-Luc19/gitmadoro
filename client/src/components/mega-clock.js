@@ -15,7 +15,7 @@ export class MegaClock extends Component {
     }
 
     handleClick() {
-        toggleTimeRunning();
+        this.props.toggleTimeRunning();
         this.setState({number: this.props.startTime})
         const keys = Object.keys(this.state)
         setInterval(() => {
@@ -36,7 +36,7 @@ export class MegaClock extends Component {
     }
 
     render () {
-        let min = this.props.timeRunning ? Math.floor(this.state.number /60) : Math.floor(this.props.startTime / 60);
+        let min = this.props.timeRunning ? Math.floor(this.state.number / 60) : Math.floor(this.props.startTime / 60);
         let sec = this.props.timeRunning ? Math.floor(this.state.number % 60) : Math.floor(this.props.startTime % 60);
 
         return (
