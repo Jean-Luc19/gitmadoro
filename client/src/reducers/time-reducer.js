@@ -1,7 +1,7 @@
 import * as actions from '../actions/time-actions';
 
 const initialState = {
-    startTime: 180,
+    startTime: 0,
     timeRunning: false
 }
 

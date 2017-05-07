@@ -18,12 +18,13 @@ passport.use(new GitHubStrategy({
 
     const updates = {
       name: profile.displayName,
-      someID: profile.id,
+      profileID: profile.id,
       token: accessToken
     };
 
     const options = {
-      upsert: true
+      upsert: true,
+      new: true
     };
 
     // update the user if s/he exists or add a new user

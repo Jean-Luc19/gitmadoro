@@ -6,8 +6,10 @@
     "react-scripts": "0.9.0"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "babel-polyfill": "^6.23.0",
     "basic-authorization-header": "^0.2.7",
+    "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-burger-menu": "^1.10.14",
     "react-cookie": "^1.0.5",
@@ -15,6 +17,7 @@
     "react-redux": "^5.0.3",
     "react-router": "^4.0.0",
     "redux": "^3.6.0",
+    "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
