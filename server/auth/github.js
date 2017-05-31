@@ -11,6 +11,7 @@ passport.use(new GitHubStrategy({
   callbackURL: githubConfig.CALLBACK_URL
   },
   function(accessToken, refreshToken, profile, done) {
+    console.log(profile)
 
     const searchQuery = {
       name: profile.displayName
